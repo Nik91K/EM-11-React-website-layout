@@ -1,0 +1,9 @@
+.HeaderMainDiv{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.HeaderMainDiv p{
+    font-size: 28px;
+}
