@@ -1,4 +1,5 @@
 .HeaderMainDiv{
+    background: rgb(40, 40, 40);
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -6,4 +7,12 @@
 
 .HeaderMainDiv p{
     font-size: 28px;
+}
+
+.left-div{
+    margin-left: 20px;
+}
+
+.rigth-div{
+    margin-right: 20px;
 }

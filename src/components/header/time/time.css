@@ -1,3 +1,21 @@
-.dateDiv p{
-    font-size: 20px;
+
+.dateDiv {
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.day-theme {
+  color: #ffe066; 
+}
+
+.night-theme {
+  color: #6181a0;
+}
+
+.time-span {
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
 }

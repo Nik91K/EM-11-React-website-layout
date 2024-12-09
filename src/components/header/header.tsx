@@ -9,10 +9,10 @@ type Header = {
 function Header(props: Header) {
     return (
     <div className="HeaderMainDiv">
-        <div>
+        <div className='left-div'>
             <p>Hello {props.userName}</p>
         </div>
-        <div>
+        <div className='rigth-div'>
             <p>Your budget: ${props.budgetValue}</p>
             <DateTimeDisplay/>
         </div>

@@ -1,4 +1,5 @@
-.MainSidebarDiv{
+.Main-Sidebar-Div{
+    background: rgb(40, 40, 40);
     width: 30%;
-    height: 100vh;
+    height: 70vh;
 }

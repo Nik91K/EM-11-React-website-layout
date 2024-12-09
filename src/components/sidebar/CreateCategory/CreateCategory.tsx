@@ -1,48 +1,34 @@
-import CreateButton from '../../utils/createButton/createButton.tsx'
-import Input from '../..//utils/input/index.tsx'
-import React, { useState } from 'react'
-import './categort.css'
-import { CategoryType } from '../../../types/types.tsx';
+import React, {useState} from "react";
+//import CreateButton from '../../utils/createButton/createButton.tsx'
+import './category.css'
 
-function CreateCategory() {
-    const [inputValue, setInputValue] = useState("");
+interface CategoryInputPromts {
+    addCategory: (category: string) => void
+}
 
-    const handle:React.MouseEventHandler<HTMLButtonElement> = (event: React.MouseEvent) => {
-        if(inputValue.length === 0) {
+const CreateCategory: React.FC<CategoryInputPromts> = ({ addCategory }) => {
+    const [category, setCategory] = useState<string>('');
 
+    const handleAddCategory = () => {
+        if (category.trim()) {
+            addCategory(category);
+            setCategory('');
         }
-        else {
-            const newCategory:CategoryType = {
-                id: Math.random(),
-                name: inputValue
-            }
-    
-            let str:any = localStorage.getItem('categories');
-            if (str != null){
-                const list:CategoryType[] = JSON.parse(str);
-                list.push(newCategory);
-                localStorage.setItem('categories', JSON.stringify(list));
-            }
-        }
-        
-        console.log(localStorage.getItem('categories'));
-    }
-
-    const handleInputChange:Function = (value: string):void => {
-        setInputValue(value)
-    }
-    
+    };
 
     return (
-      <div>
-        <div>
-            <Input onChange={handleInputChange} placeholderText='Write category name' />
+        <div className="category-div">
+            <input
+                type="text"
+                value={category}
+                onChange={(e) => setCategory(e.target.value)}
+                placeholder="Enter the category"
+            />
+            <button onClick={handleAddCategory}>
+              add
+            </button>
         </div>
-        <div>
-            <CreateButton handleClick={handle} />
-        </div>
-      </div>
-    )
-  }
-  
-export default CreateCategory
+    );
+};
+
+export default CreateCategory;

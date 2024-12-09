@@ -1,0 +1,24 @@
+.category-list{
+    font-size: 18px;
+    text-align: left;
+    text-decoration: none;
+    list-style: none;
+    border: 1px solid rgb(114, 114, 114);
+    height: 30px;
+    min-width: 300px;
+}
+
+.category-div{
+    display: flex;
+    margin-left: 25px;
+}
+
+.delete-button{
+    float: right;
+    margin-right: 2px;
+    padding: 3px 5px;
+    background-color: #963e3e;
+    color: white;
+    border: none;
+    cursor: pointer;
+}

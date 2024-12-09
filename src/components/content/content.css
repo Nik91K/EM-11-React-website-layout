@@ -1,5 +1,6 @@
-.content-wrapper{
-    width: 70%;
-    height: 100vh;
-    background-color: #e4ec6e;
+.main-Content{
+    margin-left: 20px;
+    width: 68%;
+    height: 70vh;
+    background: rgb(40, 40, 40);
 }
