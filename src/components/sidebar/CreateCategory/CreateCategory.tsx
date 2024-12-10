@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-//import CreateButton from '../../utils/createButton/createButton.tsx'
+import CreateButton from '../../utils/createButton/createButton'
 import './category.css'
 
 interface CategoryInputPromts {
@@ -24,9 +24,7 @@ const CreateCategory: React.FC<CategoryInputPromts> = ({ addCategory }) => {
                 onChange={(e) => setCategory(e.target.value)}
                 placeholder="Enter the category"
             />
-            <button onClick={handleAddCategory}>
-              add
-            </button>
+            <CreateButton handleClick={handleAddCategory} />
         </div>
     );
 };
